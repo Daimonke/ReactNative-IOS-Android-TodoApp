@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { StyleSheet, Text, SafeAreaView, ScrollView, Platform, StatusBar } from 'react-native';
 import Todo from '../components/Todo';
 import StickyHeader from '../components/StickyHeader';
-import { useEffect } from 'react';
 
 
 const Completed = ({ completedTodos, getData }) => {
@@ -14,7 +13,7 @@ const Completed = ({ completedTodos, getData }) => {
                 <Text style={styles.title}>Completed todos</Text>
                 <Text style={styles.completedTodosNumber}>{completedTodos.length}</Text>
                 {completedTodos.map((todo, i) => (
-                    <Todo key={todo.id} todo={todo} index={i} todoMenu={todoMenu} setTodoMenu={setTodoMenu} />
+                    <Todo key={todo.id} todo={todo} index={i} todoMenu={todoMenu} setTodoMenu={setTodoMenu} borderColor='#00B81A' backgroundColor='#001B1A' checkColor='#FFEC02' />
                 ))}
             </ScrollView>
         </SafeAreaView>
@@ -36,7 +35,7 @@ const styles = StyleSheet.create({
     },
     completedTodosNumber: {
         fontSize: 40,
-        color: 'navy',
+        color: 'green',
         marginBottom: 20,
     },
     body: {

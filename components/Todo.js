@@ -5,8 +5,9 @@ import { Button } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 
-const Todo = ({ todo, index, todoMenu, setTodoMenu }) => {
-    const { id, title, completed } = todo;
+const Todo = ({ todo, index, todoMenu, setTodoMenu, checkColor, ...customStyles }) => {
+    const { id, title } = todo;
+
     const [checked, setChecked] = useState(false);
 
     const handlePress = () => {
@@ -20,11 +21,11 @@ const Todo = ({ todo, index, todoMenu, setTodoMenu }) => {
     }
 
     return (
-        <TouchableOpacity style={styles.box} onPress={handlePress}>
+        <TouchableOpacity style={{ ...styles.box, ...customStyles }} onPress={handlePress}>
             {checked ?
                 <View style={styles.container}>
                     <Text style={styles.text}>{index + 1}. {title} </Text>
-                    <Icon name="check-square-o" size={20} color="green" />
+                    <Icon name="check-square-o" size={20} color={checkColor} />
                 </View>
                 :
                 <Text style={styles.text}>{index + 1}. {title}</Text>}
@@ -37,7 +38,7 @@ export default Todo
 const styles = StyleSheet.create({
     box: {
         width: '80%',
-        backgroundColor: 'black',
+        backgroundColor: '#2B0802',
         padding: 20,
         borderRadius: 10,
         borderWidth: 2,
@@ -51,7 +52,8 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 20,
-        color: 'lightgray',
+        color: 'white',
+        width: '90%',
     },
     container: {
         flexDirection: 'row',

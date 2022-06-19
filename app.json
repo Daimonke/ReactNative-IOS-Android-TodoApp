@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "firstApp",
-    "slug": "firstApp",
+    "name": "MyTodos",
+    "slug": "MyTodos",
     "version": "1.0.0",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -17,13 +17,17 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.github.daimonke",
+      "buildNumber": "1.0.0"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.github.daimonke",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"

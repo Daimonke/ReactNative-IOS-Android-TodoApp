@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
         marginLeft: -120,
         alignItems: 'flex-end',
         justifyContent: 'center',
-        borderRadius: '15%',
+        borderRadius: 15,
     },
     complete: {
         backgroundColor: '#1A3600',
@@ -101,19 +101,23 @@ const styles = StyleSheet.create({
         paddingLeft: 20,
         alignItems: 'flex-start',
         justifyContent: 'center',
-        borderRadius: '15%',
+        borderRadius: 15,
     },
     delIcon: {
         borderColor: '#AF0701',
+        textAlignVertical: 'center',
+        textAlign: 'center',
         borderWidth: 2,
         borderRadius: 15,
         padding: 5,
     },
     completeIcon: {
         borderColor: '#019E1E',
+        textAlignVertical: 'center',
+        textAlign: 'center',
         borderWidth: 2,
         borderRadius: 15,
-        padding: 5,
+        padding: 5
     }
 
 });

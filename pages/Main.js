@@ -14,7 +14,7 @@ const Main = ({ completedTodos, todos, getData }) => {
                 <Text style={styles.title}>Active Todos</Text>
                 <Text style={styles.todosNumber}>{todos.length}</Text>
                 {todos.map((todo, i) => (
-                    <Todo key={todo.id} todo={todo} index={i} todoMenu={todoMenu} setTodoMenu={setTodoMenu} />
+                    <Todo key={todo.id} todo={todo} index={i} todoMenu={todoMenu} setTodoMenu={setTodoMenu} checkColor='#2BCC02' />
                 ))}
             </ScrollView>
         </SafeAreaView>
